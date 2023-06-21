@@ -13,7 +13,9 @@ pipeline{
         }
         
         stages{
-
+              stage('Checkout code'){
+                git branch: 'main', credentialsId: 'e10b9139-dc6a-4dfa-a022-39b58cc23070', url: 'https://github.com/letrungthanh101/Demo_Jenkin2.git'
+              }
 
               stage('Quality Gate Statuc Check'){
 
